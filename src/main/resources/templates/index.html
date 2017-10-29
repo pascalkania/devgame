@@ -1,16 +1,22 @@
-<html xmlns:th="http://www.thymeleaf.org">
-<head th:include="layout :: htmlhead" th:with="title='Devgame'"></head>
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="description" content="EliteBet"/>
+    <meta name="author" content="Pascal Kania"/>
+    <link rel="shortcut icon" type="image/png" th:href="@{/images/favicon.png}"/>
+
+    <title>Devgame</title>
+
+    <link rel="stylesheet" th:href="@{/css/layout.css}"/>
+</head>
 
 <body>
-<div th:replace="layout :: navbar">(navbar)</div>
+    <div id="react"></div>
 
-<div class="container">
-    <div class="page-header">
-        <h1>Test content</h1>
-    </div>
-</div>
 
-<div th:include="layout :: footer">(footer)</div>
-
+    <script src="built/bundle.js"></script>
 </body>
 </html>
